@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     "測り方",
   ],
   robots: { index: true, follow: true },
+  verification: {
+    google: "kFxOMSSCiHp-Aqp5taCF4kzLfVxkuY1D84PMiB0ZAGA",
+  },
   alternates: {
     canonical: "/",
   },
