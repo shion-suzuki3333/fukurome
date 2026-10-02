@@ -1,8 +1,9 @@
 # フクロメ
 
-ゴミ箱の内寸から、合うゴミ袋のサイズ目安を判定するウェブツールです。計算はブラウザ内だけで完結し、寸法データはサーバーに送りません。
+ゴミ箱の内寸から、合うゴミ袋のサイズ目安を判定するウェブツールです。
 
-[ローカル表示](http://127.0.0.1:43123)
+本番: [https://fukurome.vercel.app](https://fukurome.vercel.app)  
+ローカル: [http://127.0.0.1:43123](http://127.0.0.1:43123)
 
 ## 機能
 
@@ -22,11 +23,11 @@ npm test
 npm run build
 ```
 
-本番では `.env` に公開オリジンを設定してください。
+本番では `.env` に公開オリジンを設定してください（未設定でも Vercel では自動フォールバック）。
 
 ```bash
 cp .env.example .env.local
-# NEXT_PUBLIC_SITE_URL=https://your-domain.example
+# NEXT_PUBLIC_SITE_URL=https://fukurome.vercel.app
 ```
 
 ## セキュリティ方針
@@ -34,7 +35,7 @@ cp .env.example .env.local
 - 適合判定はクライアントサイドのみ（`src/lib/bag-fit.ts`）
 - 入力は数値に正規化し 5〜200cm にクランプ
 - CSP / `X-Frame-Options` / `nosniff` / COOP 等（`next.config.ts`）
-- ファイルアップロード・外部送信なし
+- ファイルアップロードなし
 
 ## 本番公開
 
