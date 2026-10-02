@@ -2,16 +2,18 @@
 
 方針の背景は `marketing-monetization.md`。ここは**そのまま実行できる手順と文面**。
 
-前提: 本番URLを `https://YOUR.DOMAIN` に置き換える。断定・ステマ・ネガキャン禁止。
+本番URL: `https://fukurome.vercel.app`  
+断定・ステマ・ネガキャン禁止。プライバシー（端末内計算）は投稿で強調しない。
 
 ---
 
 ## Phase 0 — 公開前（必須）
 
-1. ドメイン取得・HTTPS デプロイ
-2. `.env` に `NEXT_PUBLIC_SITE_URL=https://YOUR.DOMAIN`
+1. HTTPS デプロイ（済: `https://fukurome.vercel.app`）
+2. Vercel に `NEXT_PUBLIC_SITE_URL=https://fukurome.vercel.app` → Redeploy
 3. `npm run build && npm test`
-4. [Google Search Console](https://search.google.com/search-console) でプロパティ追加 → sitemap `https://YOUR.DOMAIN/sitemap.xml` 送信
+4. [Google Search Console](https://search.google.com/search-console) でプロパティ追加 → sitemap `https://fukurome.vercel.app/sitemap.xml` 送信  
+   ※ sitemap の `<loc>` が localhost のままなら送らない（SITE_URL 後に）
 5. プライバシー / 免責 / 記事2本がインデックス対象になっていることを目視
 
 ---
@@ -45,8 +47,8 @@
 同じ45Lでも口の幅が違うことがあって、
 測るなら「口の内側」と「高さ」の2つだけでだいたい分かる。
 
-寸法入れるだけの目安ツール作った（端末内で計算・送信なし）
-https://YOUR.DOMAIN/#presets
+寸法入れるだけの目安ツール作った
+https://fukurome.vercel.app/#presets
 
 ※自治体指定袋やメーカー実寸があればそちら優先
 ```
@@ -60,8 +62,8 @@ https://YOUR.DOMAIN/#presets
 2. 角型→長辺と短辺 / 丸型→直径
 3. 底から縁までの高さ
 
-手順ページ: https://YOUR.DOMAIN/guide
-そのまま判定: https://YOUR.DOMAIN/#checker
+手順ページ: https://fukurome.vercel.app/guide
+そのまま判定: https://fukurome.vercel.app/#checker
 ```
 
 **投稿C（共有リンク実演）**
@@ -71,7 +73,7 @@ https://YOUR.DOMAIN/#presets
 目安はだいたい45L帯、という結果になった。
 
 同じ条件で試す↓
-https://YOUR.DOMAIN/?shape=rect&w=32&d=28&h=50#results
+https://fukurome.vercel.app/?shape=rect&w=32&d=28&h=50#results
 
 ※一般的な袋寸法の概算です
 ```
@@ -79,7 +81,7 @@ https://YOUR.DOMAIN/?shape=rect&w=32&d=28&h=50#results
 ### note（月0〜1）
 
 タイトル例:「一人暮らしのゴミ袋、L表記だけで選ぶと失敗しやすい理由」  
-構成: 失敗談 → 口まわりの話 → 測り方3手 → フクロメリンク → 免責一文。  
+構成: 失敗談 → 口まわりの話 → 測り方手 → フクロメリンク → 免責一文。  
 末尾に「プロモーションを含みません / 自作ツール」と明記。
 
 ### 知恵袋・教えてgoo（偶発）
@@ -96,7 +98,7 @@ https://YOUR.DOMAIN/?shape=rect&w=32&d=28&h=50#results
 3. 通ったら **結果リストの下に1枠だけ**（`adsense.md`）
 4. クリック誘導文は書かない
 
-アフィリエイトを足すなら記事末尾のみ +「PR・広告」表記。結果カードには付けない。
+アフィリエイトを足すなら記事末尾のみ + 「PR・広告」表記。結果カードには付けない。
 
 ---
 
@@ -125,4 +127,4 @@ https://YOUR.DOMAIN/?shape=rect&w=32&d=28&h=50#results
 - 特定メーカー叩き禁止
 - 結果＝商品推薦に見せない
 - 自治体ルールの断定禁止
-- 個人寸法の収集を匂わせない
+- 個人寸法の収集を匆わせない

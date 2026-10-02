@@ -2,9 +2,10 @@
 
 ## 公開前チェック
 
-1. `NEXT_PUBLIC_SITE_URL` を本番オリジンに設定（sitemap / canonical / JSON-LD）
+1. `NEXT_PUBLIC_SITE_URL=https://fukurome.vercel.app`（末尾スラッシュなし）。未設定でも Vercel 本番ホストへフォールバック
 2. `npm run build && npm test`
 3. CSP に広告ドメインを足す場合は最小許可のみ（`docs/adsense.md`）
+4. Search Console に `https://fukurome.vercel.app/sitemap.xml` を送信
 
 ## 四半期レビュー（袋寸法表）
 
